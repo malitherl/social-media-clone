@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import LogIn from './LogIn';
 import SignUp from './SignUp';
 import UserProfile from './UserProfile';
+import MainFeed from "./MainFeed";
 
 function Home(props) {
 
@@ -16,15 +17,15 @@ function Home(props) {
         <div>
             <nav>
                 <Link to="/">#</Link>
+                <input type="text" placeholder="Find more breads"></input>
                 {!isLoggedIn 
                     ? 
                         <div> <LogIn/> <SignUp/> </div>
                     :
                         <UserProfile/>
-
                 }
             </nav>
-
+                <MainFeed></MainFeed>
         </div>
     );
 }
