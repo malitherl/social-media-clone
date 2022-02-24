@@ -1,9 +1,10 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import LogIn from './LogIn';
 import SignUp from './SignUp';
 import UserProfile from './UserProfile';
-import MainFeed from "./MainFeed";
+import PostFeed from "../features/posts/PostFeed";
+import PostCreator from "../features/posts/PostCreator";
 
 function Home(props) {
 
@@ -20,12 +21,14 @@ function Home(props) {
                 <input type="text" placeholder="Find more breads"></input>
                 {!isLoggedIn 
                     ? 
-                        <div> <LogIn/> <SignUp/> </div>
+                         <LogIn/> 
                     :
                         <UserProfile/>
                 }
             </nav>
-                <MainFeed></MainFeed>
+            <PostFeed/>
+            <PostCreator/>
+
         </div>
     );
 }
