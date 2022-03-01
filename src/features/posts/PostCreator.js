@@ -4,9 +4,16 @@ import {nanoid} from '@reduxjs/toolkit';
 
 import {postAdded} from './postSlice';
 
-export default function PostCreator() {
+export default function PostCreator({match}) {
+    const userId = match.params;
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
+    //need to come back and add features to allow the username be added onto the post
+    //what we'd need to do is useSelector and search users like this: 
+    /**
+     * const user = useSelector(user => (state.find(users => users.id === userId)))
+     */
+
     const dispatch = useDispatch();
 
     function handleTitleChange(event) {

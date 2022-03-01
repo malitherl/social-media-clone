@@ -7,6 +7,7 @@ import React, { useState } from "react";
 import {db} from './firebase';
 import { collection, getDocs} from 'firebase/firestore';
 import PostFeed from './features/posts/PostFeed';
+import PostEditor from './features/posts/PostEditor';
 
 function App() {
 
@@ -27,10 +28,9 @@ function App() {
       <h1>Breaded</h1>
       <p>Bringing Home the Bread</p>
       <Routes>
-        <Route path ="/" element={
-            
-                <Home/> }/>
-
+        <Route path ="/" element={<Home/> }/>
+        <Route exact path="/posts/:postId" element={<FindPost/>}/>
+        <Route exact path='/posts/:postId' element={<PostEditor/>}/>
       </Routes>
     </div>
   );

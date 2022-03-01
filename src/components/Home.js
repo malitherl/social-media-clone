@@ -5,6 +5,7 @@ import SignUp from './SignUp';
 import UserProfile from './UserProfile';
 import PostFeed from "../features/posts/PostFeed";
 import PostCreator from "../features/posts/PostCreator";
+import FindPost from '../features/posts/FindPost';
 
 function Home(props) {
 
