@@ -3,7 +3,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-function PostFeed(){
+function Posts(){
     const posts = useSelector(state => state.posts)
 
     const renderPosts = posts.map(post => (
@@ -20,4 +20,4 @@ function PostFeed(){
     )
 }
 
-export default PostFeed;
+export default Posts;

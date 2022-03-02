@@ -23,7 +23,7 @@ export default function PostCreator({match}) {
     function handleContentChange(event){
         setContent(event.target.value)
     }
-
+ 
     function handleSavePost() {
         if (title && content) {
             dispatch(

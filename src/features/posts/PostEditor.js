@@ -13,7 +13,7 @@ export default function PostEditor({match}) {
     const history = createBrowserHistory();
 
     const post = useSelector(state => (state.find(posts=> posts.id === postId)))
-
+    
     function handleTitleChange(event) {
         setTitle(event.target.value);
     } 

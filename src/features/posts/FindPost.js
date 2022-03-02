@@ -21,7 +21,7 @@ export default function FindPost({match}) {
                 <h2>{post.title}</h2>
                 <p>{post.content}</p>
             </article>
-            <button><Link to={`posts/${postId}`}> Edit Post</Link></button>
+            <button><Link to={`posts/${postId}/edit`}> Edit Post</Link></button>
         </section>
     )
 }
